@@ -4,11 +4,13 @@ import CropSelection from './components/CropSelection';
 import Dashboard from './components/Dashboard';
 import DiseaseIdentification from './components/DiseaseIdentification';
 import SoilHealthMonitor from './components/SoilHealthMonitor';
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/irrigation-planner" element={<IrrigationPlanner />} />
         <Route path="/crop-selection" element={<CropSelection />} />

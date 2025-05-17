@@ -1,0 +1,94 @@
+/* IrrigationPlanner/index.css */
+
+.irrigation-planner-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.irrigation-planner-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #256029;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.irrigation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.irrigation-form label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.irrigation-form input,
+.irrigation-form select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+.irrigation-form input:focus,
+.irrigation-form select:focus {
+    border-color: #256029;
+    outline: none;
+}
+
+.irrigation-submit-btn {
+    background: #256029;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.irrigation-submit-btn:hover {
+    background: #388e3c;
+}
+
+.irrigation-results {
+    margin-top: 32px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 8px;
+    color: #256029;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    .irrigation-planner-container {
+        padding: 16px;
+    }
+
+    .irrigation-planner-title {
+        font-size: 1.3rem;
+    }
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    color: #00796b;
+    font-size: 1.1rem;
+    text-align: center;
+}
