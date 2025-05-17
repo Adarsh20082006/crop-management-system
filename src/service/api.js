@@ -1,4 +1,6 @@
 // services/api.js
+import axios from 'axios';
+
 const API_KEY = '849cfddf2889b4a05f08224d7648ed60';
 const BASE_URL = 'https://api.agromonitoring.com/agro/1.0';
 export const createPolygon = async (geoJson) => {
@@ -46,3 +48,19 @@ export const fetchSoilData = async (polygonId) => {
     const res = await fetch(`${BASE_URL}/soil?polyid=${polygonId}&appid=${API_KEY}`);
     return res.json();
 };
+
+
+
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5001/analyze',
+});
+
+
+
+export const analyzeCropHealth = (formData) => 
+  api.post('/analyze', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' }
+  });
+
+export const getIrrigationPlan = () => 
+  api.get('/irrigation-plan');

@@ -4,16 +4,19 @@ import MapDetails from '../MapDetails';
 import './index.css';
 import Cookies from 'js-cookie';
 
-function Dashboard() {
+function Dashboard(props) {
     const [area, setArea] = useState(null);
     const [yeild, setYeild] = useState(null);
     const [alertStatus, setAlertStatus] = useState(null);
     const [alertScore, setAlertScore] = useState(null);
     const [ndviData, setNdviData] = useState(null);
+    console.log(props)
 
     const handleAreaSelected = (coords) => {
         setArea(coords);
         Cookies.set('selected_area', JSON.stringify(coords), { expires: 7 });
+        
+        
     };
 
 
@@ -41,6 +44,7 @@ function Dashboard() {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(inpData)
+                    
                 });
 
                 if (response.ok) {
